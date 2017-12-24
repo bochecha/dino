@@ -5,6 +5,9 @@
     "sdk": "org.gnome.Sdk",
     "command": "dino",
     "finish-args": [
+        /* FIXME: Dino needs this to encrypt chats with GPG, but it is too big a hole to poke in the sandbox. */
+        "--filesystem=~/.gnupg",
+
         "--socket=x11",
         "--share=ipc",
         "--socket=wayland",
